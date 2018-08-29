@@ -12,8 +12,8 @@ import org.springframework.context.ApplicationContext;
 /**
  * @author malike_st
  */
-@SpringBootApplication
 @EnableEurekaServer
+@SpringBootApplication
 public class ServiceDiscoveryMain {
 
 
