@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 
-    <parent>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-starter-parent</artifactId>
-        <version>Finchley.M3</version>
-    </parent>
+  <parent>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-parent</artifactId>
+    <version>Finchley.M3</version>
+  </parent>
 
-    <properties>
-        <start-class>st.malike.service.discovery.ServiceDiscoveryMain</start-class>
-        <java.version>1.8</java.version>
-    </properties>
+  <properties>
+    <start-class>st.malike.bulk.message.sidecar.BulkMessageSidecarMain</start-class>
+    <java.version>1.8</java.version>
+  </properties>
 
 
   <repositories>
@@ -71,27 +72,23 @@
   </pluginRepositories>
 
 
-
   <modelVersion>4.0.0</modelVersion>
-    <groupId>st.malike</groupId>
-    <artifactId>service-discovery</artifactId>
-    <packaging>jar</packaging>
-    <name>Service Discovery</name>
-    <version>1.0-SNAPSHOT</version>
-    <description>Service Discovery</description>
+  <groupId>st.malike</groupId>
+  <artifactId>bulk-message-sidecar</artifactId>
+  <packaging>jar</packaging>
+  <name>Bulk Message Serivce Sidecar</name>
+  <version>1.0-SNAPSHOT</version>
+  <description>Bulk Message Service Sidecar</description>
 
   <dependencies>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-actuator</artifactId>
     </dependency>
-    <dependency>
-      <groupId>de.codecentric</groupId>
-      <artifactId>spring-boot-admin-starter-server</artifactId>
-    </dependency>
+
     <dependency>
       <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-netflix-eureka-server</artifactId>
+      <artifactId>spring-cloud-netflix-sidecar</artifactId>
     </dependency>
 
 
@@ -101,7 +98,6 @@
       <version>0.4.4</version>
       <scope>runtime</scope>
     </dependency>
-
 
 
     <dependency>
@@ -138,8 +134,6 @@
       </plugin>
     </plugins>
   </build>
-
-
 
 
 </project>
